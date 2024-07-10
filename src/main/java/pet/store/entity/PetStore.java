@@ -2,7 +2,6 @@ package pet.store.entity;
 
 import java.util.HashSet;
 import java.util.Set;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -25,7 +24,7 @@ public class PetStore {
 	private Long petStoreId;
 	private String petStoreName;
 	private String petStoreAddress;
-	private String cityStateAndZipCode;
+	private String petStoreCityStateZip;
 	private String petStorePhoneNumber;
 
 	@EqualsAndHashCode.Exclude

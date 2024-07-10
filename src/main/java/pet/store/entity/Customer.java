@@ -23,10 +23,13 @@ public class Customer {
 	private String customerFirstName;
 	private String customerSurname;
 	private String customerPhoneNumber;
+	private String customerEmail;
 	
 
 	@EqualsAndHashCode.Exclude
 	@ToString.Exclude
 	@ManyToMany(mappedBy = "customers", cascade = CascadeType.PERSIST)
 	private Set<PetStore> petStores = new HashSet<>();
-}
+
+
+} // end of class
