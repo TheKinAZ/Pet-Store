@@ -22,5 +22,15 @@ public class GlobalErrorHandler {
 		errorResponse.put("message", ex.toString());
 		return errorResponse;
 	}
-
-}
+	
+	@ExceptionHandler(UnsupportedOperationException.class)
+	@ResponseStatus(code = HttpStatus.METHOD_NOT_ALLOWED)
+	public Map<String, String> unsupportedOperationException(UnsupportedOperationException ex) {
+		log.info("NoSuchElementException occured: ()", ex.getMessage());
+		
+		Map<String, String> errorResponse = new HashMap<>();
+		errorResponse.put("message", ex.toString());
+		return errorResponse;
+	}
+	
+} // end of class

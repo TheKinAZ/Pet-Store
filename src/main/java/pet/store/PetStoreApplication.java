@@ -10,4 +10,4 @@ public class PetStoreApplication {
 		
 	}
 
-}
+} // end of class
